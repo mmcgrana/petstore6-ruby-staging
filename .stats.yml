@@ -1,4 +1,4 @@
 configured_endpoints: 19
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/mmcgrana/petstore6-5165a3ed4686efa522357e24932d025e1a2e1a548f77c2e5acdff8c517833d2b.yml
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/mmcgrana/petstore6-ce11d8453ad00ca97ec8c307ea9616f67aa85db123edbe746e3743f418a53506.yml
 openapi_spec_hash: 356a7298b2abac3fdf72ad5ee046b952
-config_hash: 407f6594d37e1f304e28c7b70ac17d22
+config_hash: 98cf3cb47ce466edd99faeeebc9ebff1
