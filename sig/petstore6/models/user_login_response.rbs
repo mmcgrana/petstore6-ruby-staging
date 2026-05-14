@@ -1,0 +1,5 @@
+module Petstore6
+  module Models
+    class UserLoginResponse = String
+  end
+end

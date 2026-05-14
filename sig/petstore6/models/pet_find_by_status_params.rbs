@@ -1,0 +1,40 @@
+module Petstore6
+  module Models
+    type pet_find_by_status_params =
+      { status: Petstore6::Models::PetFindByStatusParams::status }
+      & Petstore6::Internal::Type::request_parameters
+
+    class PetFindByStatusParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_reader status: Petstore6::Models::PetFindByStatusParams::status?
+
+      def status=: (
+        Petstore6::Models::PetFindByStatusParams::status
+      ) -> Petstore6::Models::PetFindByStatusParams::status
+
+      def initialize: (
+        ?status: Petstore6::Models::PetFindByStatusParams::status,
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        status: Petstore6::Models::PetFindByStatusParams::status,
+        request_options: Petstore6::RequestOptions
+      }
+
+      type status = :available | :pending | :sold
+
+      module Status
+        extend Petstore6::Internal::Type::Enum
+
+        AVAILABLE: :available
+        PENDING: :pending
+        SOLD: :sold
+
+        def self?.values: -> ::Array[Petstore6::Models::PetFindByStatusParams::status]
+      end
+    end
+  end
+end

@@ -1,0 +1,38 @@
+module Petstore6
+  module Models
+    type pet_upload_image_params =
+      {
+        pet_id: Integer,
+        image: Petstore6::Internal::file_input,
+        additional_metadata: String
+      }
+      & Petstore6::Internal::Type::request_parameters
+
+    class PetUploadImageParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_accessor pet_id: Integer
+
+      attr_accessor image: Petstore6::Internal::file_input
+
+      attr_reader additional_metadata: String?
+
+      def additional_metadata=: (String) -> String
+
+      def initialize: (
+        pet_id: Integer,
+        image: Petstore6::Internal::file_input,
+        ?additional_metadata: String,
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        pet_id: Integer,
+        image: Petstore6::Internal::file_input,
+        additional_metadata: String,
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end

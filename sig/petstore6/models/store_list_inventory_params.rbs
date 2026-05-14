@@ -1,0 +1,15 @@
+module Petstore6
+  module Models
+    type store_list_inventory_params =
+      {  } & Petstore6::Internal::Type::request_parameters
+
+    class StoreListInventoryParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      def initialize: (?request_options: Petstore6::request_opts) -> void
+
+      def to_hash: -> { request_options: Petstore6::RequestOptions }
+    end
+  end
+end

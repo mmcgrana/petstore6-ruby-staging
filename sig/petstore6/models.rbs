@@ -1,0 +1,45 @@
+module Petstore6
+  class Category = Petstore6::Models::Category
+
+  class Order = Petstore6::Models::Order
+
+  class Pet = Petstore6::Models::Pet
+
+  class PetCreateParams = Petstore6::Models::PetCreateParams
+
+  class PetDeleteParams = Petstore6::Models::PetDeleteParams
+
+  class PetFindByStatusParams = Petstore6::Models::PetFindByStatusParams
+
+  class PetFindByTagsParams = Petstore6::Models::PetFindByTagsParams
+
+  class PetRetrieveParams = Petstore6::Models::PetRetrieveParams
+
+  class PetUpdateByIDParams = Petstore6::Models::PetUpdateByIDParams
+
+  class PetUpdateParams = Petstore6::Models::PetUpdateParams
+
+  class PetUploadImageParams = Petstore6::Models::PetUploadImageParams
+
+  module Store = Petstore6::Models::Store
+
+  class StoreListInventoryParams = Petstore6::Models::StoreListInventoryParams
+
+  class Tag = Petstore6::Models::Tag
+
+  class User = Petstore6::Models::User
+
+  class UserCreateParams = Petstore6::Models::UserCreateParams
+
+  class UserCreateWithListParams = Petstore6::Models::UserCreateWithListParams
+
+  class UserDeleteParams = Petstore6::Models::UserDeleteParams
+
+  class UserLoginParams = Petstore6::Models::UserLoginParams
+
+  class UserLogoutParams = Petstore6::Models::UserLogoutParams
+
+  class UserRetrieveParams = Petstore6::Models::UserRetrieveParams
+
+  class UserUpdateParams = Petstore6::Models::UserUpdateParams
+end

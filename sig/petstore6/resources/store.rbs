@@ -1,0 +1,13 @@
+module Petstore6
+  module Resources
+    class Store
+      attr_reader orders: Petstore6::Resources::Store::Orders
+
+      def list_inventory: (
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Models::store_list_inventory_response
+
+      def initialize: (client: Petstore6::Client) -> void
+    end
+  end
+end

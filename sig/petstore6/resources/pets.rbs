@@ -1,0 +1,61 @@
+module Petstore6
+  module Resources
+    class Pets
+      def create: (
+        name: String,
+        photo_urls: ::Array[String],
+        ?id: Integer,
+        ?category: Petstore6::Category,
+        ?status: Petstore6::Models::Pet::status,
+        ?tags: ::Array[Petstore6::Tag],
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Pet
+
+      def retrieve: (
+        Integer pet_id,
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Pet
+
+      def update: (
+        name: String,
+        photo_urls: ::Array[String],
+        ?id: Integer,
+        ?category: Petstore6::Category,
+        ?status: Petstore6::Models::Pet::status,
+        ?tags: ::Array[Petstore6::Tag],
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Pet
+
+      def delete: (
+        Integer pet_id,
+        ?request_options: Petstore6::request_opts
+      ) -> nil
+
+      def find_by_status: (
+        ?status: Petstore6::Models::PetFindByStatusParams::status,
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Models::pet_find_by_status_response
+
+      def find_by_tags: (
+        ?tags: ::Array[String],
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Models::pet_find_by_tags_response
+
+      def update_by_id: (
+        Integer pet_id,
+        ?name: String,
+        ?status: String,
+        ?request_options: Petstore6::request_opts
+      ) -> nil
+
+      def upload_image: (
+        Integer pet_id,
+        image: Petstore6::Internal::file_input,
+        ?additional_metadata: String,
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::Models::PetUploadImageResponse
+
+      def initialize: (client: Petstore6::Client) -> void
+    end
+  end
+end

@@ -1,0 +1,55 @@
+module Petstore6
+  module Resources
+    class Users
+      def create: (
+        ?id: Integer,
+        ?email: String,
+        ?first_name: String,
+        ?last_name: String,
+        ?password: String,
+        ?phone: String,
+        ?username: String,
+        ?user_status: Integer,
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::User
+
+      def retrieve: (
+        String username,
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::User
+
+      def update: (
+        String existing_username,
+        ?id: Integer,
+        ?email: String,
+        ?first_name: String,
+        ?last_name: String,
+        ?password: String,
+        ?phone: String,
+        ?username: String,
+        ?user_status: Integer,
+        ?request_options: Petstore6::request_opts
+      ) -> nil
+
+      def delete: (
+        String username,
+        ?request_options: Petstore6::request_opts
+      ) -> nil
+
+      def create_with_list: (
+        ?items: ::Array[Petstore6::User],
+        ?request_options: Petstore6::request_opts
+      ) -> Petstore6::User
+
+      def login: (
+        ?password: String,
+        ?username: String,
+        ?request_options: Petstore6::request_opts
+      ) -> String
+
+      def logout: (?request_options: Petstore6::request_opts) -> nil
+
+      def initialize: (client: Petstore6::Client) -> void
+    end
+  end
+end

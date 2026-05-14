@@ -1,0 +1,9 @@
+module Petstore6
+  module Internal
+    extend Petstore6::Internal::Util::SorbetRuntimeSupport
+
+    type file_input = Pathname | StringIO | IO | String | Petstore6::FilePart
+
+    OMIT: Object
+  end
+end

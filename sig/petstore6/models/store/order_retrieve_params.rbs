@@ -1,0 +1,25 @@
+module Petstore6
+  module Models
+    module Store
+      type order_retrieve_params =
+        { order_id: Integer } & Petstore6::Internal::Type::request_parameters
+
+      class OrderRetrieveParams < Petstore6::Internal::Type::BaseModel
+        extend Petstore6::Internal::Type::RequestParameters::Converter
+        include Petstore6::Internal::Type::RequestParameters
+
+        attr_accessor order_id: Integer
+
+        def initialize: (
+          order_id: Integer,
+          ?request_options: Petstore6::request_opts
+        ) -> void
+
+        def to_hash: -> {
+          order_id: Integer,
+          request_options: Petstore6::RequestOptions
+        }
+      end
+    end
+  end
+end

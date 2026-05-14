@@ -1,0 +1,17 @@
+module Petstore6
+  module Models
+    module Store
+      type order_create_params =
+        {  } & Petstore6::Internal::Type::request_parameters
+
+      class OrderCreateParams < Petstore6::Models::Order
+        extend Petstore6::Internal::Type::RequestParameters::Converter
+        include Petstore6::Internal::Type::RequestParameters
+
+        def initialize: (?request_options: Petstore6::request_opts) -> void
+
+        def to_hash: -> { request_options: Petstore6::RequestOptions }
+      end
+    end
+  end
+end
