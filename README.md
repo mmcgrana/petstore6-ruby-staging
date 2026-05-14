@@ -15,7 +15,7 @@ To use this gem, install via Bundler by adding the following to your application
 <!-- x-release-please-start-version -->
 
 ```ruby
-gem "petstore6", "~> 0.0.1"
+gem "petstore6", "~> 0.0.2"
 ```
 
 <!-- x-release-please-end -->
