@@ -110,4 +110,4 @@ walk_tree "$DIST_DIR"
 echo "::endgroup::"
 
 echo -e "${GREEN}Gem artifacts uploaded to Stainless storage.${NC}"
-echo -e "\033[32mInstallation: bundle remove petstore6 && bundle add petstore6 --source 'https://pkg.stainless.com/s/petstore6-ruby/$SHA'\033[0m"
+echo -e "\033[32mInstallation: bundle remove petstore6 && bundle add petstore6 --source 'https://pkg.stainless.com/s/petstore6-ruby-staging/$SHA'\033[0m"

@@ -230,5 +230,3 @@ Ruby 3.2.0 or higher.
 ## Contributing
 
 See [the contributing documentation](https://github.com/mmcgrana/petstore6-ruby/tree/main/CONTRIBUTING.md).
-
-Thanks from SaaS land!
