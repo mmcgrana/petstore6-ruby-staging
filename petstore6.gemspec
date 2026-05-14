@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version = Petstore6::VERSION
   s.summary = "Ruby library to access the Petstore6 API"
   s.authors = ["Petstore6"]
-  s.email = ""
+  s.email = "test1@gmail.com"
   s.homepage = "https://gemdocs.org/gems/petstore6"
   s.metadata["homepage_uri"] = s.homepage
   s.metadata["source_code_uri"] = "https://github.com/mmcgrana/petstore6-ruby"
