@@ -232,3 +232,5 @@ Ruby 3.2.0 or higher.
 See [the contributing documentation](https://github.com/mmcgrana/petstore6-ruby/tree/main/CONTRIBUTING.md).
 
 Thanks from SaaS land!
+
+This is a tweak in an stlc branch.
