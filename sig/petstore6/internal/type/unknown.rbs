@@ -1,0 +1,26 @@
+module Petstore6
+  module Internal
+    module Type
+      class Unknown
+        extend Petstore6::Internal::Type::Converter
+        extend Petstore6::Internal::Util::SorbetRuntimeSupport
+
+        def self.===: (top other) -> bool
+
+        def self.==: (top other) -> bool
+
+        def self.coerce: (
+          top value,
+          state: Petstore6::Internal::Type::Converter::coerce_state
+        ) -> top
+
+        def self.dump: (
+          top value,
+          state: Petstore6::Internal::Type::Converter::dump_state
+        ) -> top
+
+        def self.to_sorbet_type: -> top
+      end
+    end
+  end
+end

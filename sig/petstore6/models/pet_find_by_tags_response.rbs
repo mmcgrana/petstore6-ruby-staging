@@ -1,0 +1,7 @@
+module Petstore6
+  module Models
+    type pet_find_by_tags_response = ::Array[Petstore6::Pet]
+
+    PetFindByTagsResponse: Petstore6::Internal::Type::Converter
+  end
+end

@@ -1,0 +1,32 @@
+module Petstore6
+  module Models
+    type user_login_params =
+      { password: String, username: String }
+      & Petstore6::Internal::Type::request_parameters
+
+    class UserLoginParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_reader password: String?
+
+      def password=: (String) -> String
+
+      attr_reader username: String?
+
+      def username=: (String) -> String
+
+      def initialize: (
+        ?password: String,
+        ?username: String,
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        password: String,
+        username: String,
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end

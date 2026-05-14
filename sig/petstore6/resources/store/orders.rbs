@@ -1,0 +1,29 @@
+module Petstore6
+  module Resources
+    class Store
+      class Orders
+        def create: (
+          ?id: Integer,
+          ?complete: bool,
+          ?pet_id: Integer,
+          ?quantity: Integer,
+          ?ship_date: Time,
+          ?status: Petstore6::Models::Order::status,
+          ?request_options: Petstore6::request_opts
+        ) -> Petstore6::Order
+
+        def retrieve: (
+          Integer order_id,
+          ?request_options: Petstore6::request_opts
+        ) -> Petstore6::Order
+
+        def delete: (
+          Integer order_id,
+          ?request_options: Petstore6::request_opts
+        ) -> nil
+
+        def initialize: (client: Petstore6::Client) -> void
+      end
+    end
+  end
+end

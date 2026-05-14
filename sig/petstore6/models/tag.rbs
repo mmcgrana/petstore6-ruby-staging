@@ -1,0 +1,19 @@
+module Petstore6
+  module Models
+    type tag = { id: Integer, name: String }
+
+    class Tag < Petstore6::Internal::Type::BaseModel
+      attr_reader id: Integer?
+
+      def id=: (Integer) -> Integer
+
+      attr_reader name: String?
+
+      def name=: (String) -> String
+
+      def initialize: (?id: Integer, ?name: String) -> void
+
+      def to_hash: -> { id: Integer, name: String }
+    end
+  end
+end

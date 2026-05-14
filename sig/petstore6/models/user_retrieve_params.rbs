@@ -1,0 +1,23 @@
+module Petstore6
+  module Models
+    type user_retrieve_params =
+      { username: String } & Petstore6::Internal::Type::request_parameters
+
+    class UserRetrieveParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_accessor username: String
+
+      def initialize: (
+        username: String,
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        username: String,
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end

@@ -1,0 +1,26 @@
+module Petstore6
+  module Models
+    type user_create_with_list_params =
+      { items: ::Array[Petstore6::User] }
+      & Petstore6::Internal::Type::request_parameters
+
+    class UserCreateWithListParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_reader items: ::Array[Petstore6::User]?
+
+      def items=: (::Array[Petstore6::User]) -> ::Array[Petstore6::User]
+
+      def initialize: (
+        ?items: ::Array[Petstore6::User],
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        items: ::Array[Petstore6::User],
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end

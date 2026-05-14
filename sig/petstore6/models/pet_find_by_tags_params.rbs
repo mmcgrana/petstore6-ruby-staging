@@ -1,0 +1,25 @@
+module Petstore6
+  module Models
+    type pet_find_by_tags_params =
+      { tags: ::Array[String] } & Petstore6::Internal::Type::request_parameters
+
+    class PetFindByTagsParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_reader tags: ::Array[String]?
+
+      def tags=: (::Array[String]) -> ::Array[String]
+
+      def initialize: (
+        ?tags: ::Array[String],
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        tags: ::Array[String],
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end

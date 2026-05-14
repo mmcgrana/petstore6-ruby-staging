@@ -1,0 +1,36 @@
+module Petstore6
+  module Models
+    type pet_update_by_id_params =
+      { pet_id: Integer, name: String, status: String }
+      & Petstore6::Internal::Type::request_parameters
+
+    class PetUpdateByIDParams < Petstore6::Internal::Type::BaseModel
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      attr_accessor pet_id: Integer
+
+      attr_reader name: String?
+
+      def name=: (String) -> String
+
+      attr_reader status: String?
+
+      def status=: (String) -> String
+
+      def initialize: (
+        pet_id: Integer,
+        ?name: String,
+        ?status: String,
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        pet_id: Integer,
+        name: String,
+        status: String,
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end

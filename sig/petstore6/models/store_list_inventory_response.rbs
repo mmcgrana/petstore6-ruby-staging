@@ -1,0 +1,7 @@
+module Petstore6
+  module Models
+    type store_list_inventory_response = ::Hash[Symbol, Integer]
+
+    StoreListInventoryResponse: Petstore6::Internal::Type::Converter
+  end
+end

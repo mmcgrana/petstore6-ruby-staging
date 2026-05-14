@@ -1,0 +1,67 @@
+module Petstore6
+  module Models
+    type pet =
+      {
+        name: String,
+        photo_urls: ::Array[String],
+        id: Integer,
+        category: Petstore6::Category,
+        status: Petstore6::Models::Pet::status,
+        tags: ::Array[Petstore6::Tag]
+      }
+
+    class Pet < Petstore6::Internal::Type::BaseModel
+      attr_accessor name: String
+
+      attr_accessor photo_urls: ::Array[String]
+
+      attr_reader id: Integer?
+
+      def id=: (Integer) -> Integer
+
+      attr_reader category: Petstore6::Category?
+
+      def category=: (Petstore6::Category) -> Petstore6::Category
+
+      attr_reader status: Petstore6::Models::Pet::status?
+
+      def status=: (
+        Petstore6::Models::Pet::status
+      ) -> Petstore6::Models::Pet::status
+
+      attr_reader tags: ::Array[Petstore6::Tag]?
+
+      def tags=: (::Array[Petstore6::Tag]) -> ::Array[Petstore6::Tag]
+
+      def initialize: (
+        name: String,
+        photo_urls: ::Array[String],
+        ?id: Integer,
+        ?category: Petstore6::Category,
+        ?status: Petstore6::Models::Pet::status,
+        ?tags: ::Array[Petstore6::Tag]
+      ) -> void
+
+      def to_hash: -> {
+        name: String,
+        photo_urls: ::Array[String],
+        id: Integer,
+        category: Petstore6::Category,
+        status: Petstore6::Models::Pet::status,
+        tags: ::Array[Petstore6::Tag]
+      }
+
+      type status = :available | :pending | :sold
+
+      module Status
+        extend Petstore6::Internal::Type::Enum
+
+        AVAILABLE: :available
+        PENDING: :pending
+        SOLD: :sold
+
+        def self?.values: -> ::Array[Petstore6::Models::Pet::status]
+      end
+    end
+  end
+end

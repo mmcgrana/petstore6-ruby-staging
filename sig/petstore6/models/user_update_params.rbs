@@ -1,0 +1,26 @@
+module Petstore6
+  module Models
+    type user_update_params =
+      { existing_username: String }
+      & Petstore6::Internal::Type::request_parameters
+
+    class UserUpdateParams < Petstore6::Models::User
+      extend Petstore6::Internal::Type::RequestParameters::Converter
+      include Petstore6::Internal::Type::RequestParameters
+
+      def existing_username: -> String
+
+      def existing_username=: (String _) -> String
+
+      def initialize: (
+        existing_username: String,
+        ?request_options: Petstore6::request_opts
+      ) -> void
+
+      def to_hash: -> {
+        existing_username: String,
+        request_options: Petstore6::RequestOptions
+      }
+    end
+  end
+end
