@@ -43,13 +43,13 @@ If you’d like to use the repository from source, you can either install from g
 To install via git in your `Gemfile`:
 
 ```ruby
-gem "petstore6", git: "https://github.com/stainless-sdks/petstore6-ruby"
+gem "petstore6", git: "https://github.com/mmcgrana/petstore6-ruby"
 ```
 
 Alternatively, reference local copy of the repo:
 
 ```bash
-$ git clone -- 'https://github.com/stainless-sdks/petstore6-ruby' '<path-to-repo>'
+$ git clone -- 'https://github.com/mmcgrana/petstore6-ruby' '<path-to-repo>'
 ```
 
 ```ruby
