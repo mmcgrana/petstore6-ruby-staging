@@ -50,7 +50,7 @@ module Petstore6
         )
       end
 
-      # Update an existing pet by Id
+      # Update an already created pet by Id
       #
       # @overload update(name:, photo_urls:, id: nil, category: nil, status: nil, tags: nil, request_options: {})
       #

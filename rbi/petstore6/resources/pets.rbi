@@ -42,7 +42,7 @@ module Petstore6
       )
       end
 
-      # Update an existing pet by Id
+      # Update an already created pet by Id
       sig do
         params(
           name: String,
